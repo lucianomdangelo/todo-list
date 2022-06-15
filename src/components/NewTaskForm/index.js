@@ -6,7 +6,11 @@ export default function NewTaskForm() {
   const { addTask } = useTasks()
 
   const submit = e => {
-    /// TODO: validar que la task sea valida, que no sea vacia
+    if (!task || /^\s*$/.test(task)){
+      // TODO: display error
+      setTask('');
+      return;
+    }
     e.preventDefault()
     addTask(task)
     setTask('')
