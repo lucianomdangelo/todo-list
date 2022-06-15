@@ -7,7 +7,7 @@ export default function Task({ id, task, complete }) {
 
   return (
     <div className='task' >
-        <input className="cb" type="checkbox"  onChange={toogleTask} />
+        <input className="cb" type="checkbox" defaultChecked={complete}  onChange={toogleTask} />
         <span className={ complete ? 'task-done' : 'task-undone' }>{ task }</span>
     </div>
   )
