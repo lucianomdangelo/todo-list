@@ -1,0 +1,58 @@
+:root {
+    --dark: #282c34;
+    --medium: lightgray;
+    --light: grey;
+}
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.newtaskform {
+    display: block;
+    margin-top: 0.5em;
+}
+
+.task-done {
+    text-decoration: line-through;
+    color: var(--light);
+}
+
+input[type=checkbox] {
+  appearance: unset;
+  background-color: var(--dark);
+  border: 1px solid black;
+  border-radius: 0.3em;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+  margin-right: 1em;
+}
+
+input[type=checkbox]:hover {
+
+    background-color: var(--light);
+  }
+
+input[type=checkbox]:checked {
+    background-color: var(--light);
+}
+
+input[type=text] {
+    appearance: unset;
+    background-color: var(--dark);
+    border: 1px solid black;
+    border-radius: 0.3em;
+    vertical-align: middle;
+    color: var(--medium);
+    margin-right: 1em;
+}
+
+.add-new-task-button {
+    appearance: unset;
+    border-style:ridge;
+    border-radius: 0.3em;
+    color: var(--medium);
+    background-color: var(--dark);
+}
