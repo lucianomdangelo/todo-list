@@ -35,9 +35,11 @@
     border: 1px solid var(--medium);
 }
 
-.cb:hover, .cb:active {
-    background-color: var(--light);
-    border: 1px solid var(--dark);
+@media (hover: hover) {
+    .cb:hover {
+        background-color: var(--light);
+        border: 1px solid var(--dark);
+    }
 }
 
 
