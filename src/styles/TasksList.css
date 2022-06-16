@@ -1,0 +1,52 @@
+@media screen and (max-width: 767px) {
+    .task-list {
+        align-self: center;
+        position: relative;
+        left: 3vw;
+        margin-top: 1.5vh;
+        max-height: 80vh;
+        overflow:scroll;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .task-list {
+        display: inline;
+        width: 100%;
+        align-self: center;
+        position: relative;
+        left: 3vw;
+        margin-top: 1.5em;
+        max-height: 80vh;
+        overflow:scroll;
+    }
+}
+
+
+.task-done {
+    text-decoration: line-through;
+    color: var(--medium);
+}
+
+.cb {
+    appearance: none;
+    background-color: var(--dark);
+    border: 1px solid var(--light);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    vertical-align: middle;
+    margin-right: 0.8em ;
+    padding: 0.5em;
+    border-radius: 3px;
+}
+
+.cb:checked {
+    background-color: var(--dark);
+    border: 1px solid var(--medium);
+}
+
+@media (hover: hover) {
+    .cb:hover {
+        background-color: var(--light);
+        border: 1px solid var(--dark);
+    }
+}

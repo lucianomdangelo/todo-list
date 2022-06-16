@@ -18,7 +18,7 @@ export default function NewTaskForm() {
 
   return (
     <form onSubmit={submit} className="newtaskform">
-      <input type="text" value={task} placeholder="Get some eggs..." onChange={e => setTask(e.target.value)} required />
+      <input className="add-new-task-input" type="text" value={task} placeholder="Get some eggs..." onChange={e => setTask(e.target.value)} required />
       <button className="add-new-task-button">Add</button>
     </form>
   )

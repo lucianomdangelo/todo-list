@@ -1,0 +1,55 @@
+@media screen and (max-width: 767px) {
+    .newtaskform {
+        width: 100%;
+        text-align: center;
+        
+    }
+    .newtaskform .add-new-task-input {
+        width: 75vw;
+        vertical-align: middle;
+    }
+    .newtaskform .add-new-task-button {
+        width: 15vw;
+        vertical-align: middle;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .newtaskform {
+        display: inline-block;
+        width:100%;
+        align-self: center;
+        text-align: center;
+    }
+    .newtaskform .add-new-task-input {
+        width: 75%;
+        vertical-align: middle;
+    }
+    .newtaskform .add-new-task-button {
+        width: 15%;
+        vertical-align: middle;
+    }
+}
+
+.newtaskform {
+    display: block;
+    margin-top: 0.5em;
+}
+
+input[type=text] {
+    appearance: none;
+    background-color: var(--dark);
+    border: 1px solid black;
+    border-radius: 0.3em;
+    vertical-align: middle;
+    color: var(--medium);
+    margin-right: 1em;
+}
+
+.add-new-task-button {
+    appearance: none;
+    border-style:ridge;
+    border-radius: 0.3em;
+    color: var(--medium);
+    background-color: var(--dark);
+}

@@ -5,7 +5,7 @@ import { useTasks } from '../../context/TaskContextProvider.js'
 export default function TaskList() {
   const { tasks } = useTasks()
   return (
-    <div id='task-list'>
+    <div className='task-list'>
         {
           tasks.map((task, i) => 
             <Task key={i} {...task} />
