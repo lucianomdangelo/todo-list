@@ -26,6 +26,10 @@
 .task-done {
     text-decoration: line-through;
     color: var(--medium);
+    vertical-align: middle;
+}
+.task-undone {
+    vertical-align: middle;
 }
 
 .cb {
@@ -49,4 +53,15 @@
         background-color: var(--light);
         border: 1px solid var(--dark);
     }
+}
+
+.delete-task-button {
+    font-weight: 600;
+    font-size: 0.4em;
+    border: none;
+    color: var(--medium);
+    vertical-align: middle;
+    position: relative;
+    background-color: unset;
+    left: 0.5em;
 }

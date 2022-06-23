@@ -6,13 +6,13 @@ const TaskContext = createContext()
 export const useTasks = () => useContext(TaskContext)
 
 export default function TaskContextProvider({ children }) {
-  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('todo-list')) || []);
+  const [tasks, setTasks] = useState([...JSON.parse(localStorage.getItem('todo-list'))] || []);
 
   useEffect(() => {
     localStorage.setItem('todo-list', JSON.stringify(tasks));
   }, [tasks]);
 
-  const addTask = task =>
+  const addTask = task => {
       setTasks([
           ...tasks,
           {
@@ -21,14 +21,23 @@ export default function TaskContextProvider({ children }) {
               complete: false
           }
       ])
+    };
 
-  const setStatusTask = (id, status) => {
-      setTasks(tasks.map(t => t.id === id ? {...t, complete: status} : t))
-  }
+    const deleteCompletedTasks = () => {
+        setTasks([...tasks.filter( t => !t.complete )]);
+    };
 
-  return (
-      <TaskContext.Provider value={{ tasks, addTask, setStatusTask }}>
-          { children }
-      </TaskContext.Provider>
-  )
+    const deleteTask = (id) => {
+        setTasks([...tasks.filter( t => t.id !== id )]);
+    };
+
+    const setStatusTask = (id, status) => {
+        setTasks([...tasks.map(t => t.id === id ? {...t, complete: status} : t)])
+    };
+
+    return (
+        <TaskContext.Provider value={{ tasks, addTask, setStatusTask, deleteCompletedTasks, deleteTask }}>
+            { children }
+        </TaskContext.Provider>
+    )
 }

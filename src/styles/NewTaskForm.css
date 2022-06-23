@@ -46,10 +46,22 @@ input[type=text] {
     margin-right: 1em;
 }
 
-.add-new-task-button {
+button {
     appearance: none;
     border-style:ridge;
     border-radius: 0.3em;
     color: var(--medium);
-    background-color: var(--dark);
+    background-color: rgba(0,0,0,0.20);
+}
+
+.delete-complete-task-button {
+    width: 80vw;
+    margin-top: .5em;
+    text-align: center;
+    display: inline;
+    align-self: center;
+    
+    left: 2em;
+    position: relative;
+    
 }
