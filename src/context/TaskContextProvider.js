@@ -6,7 +6,7 @@ const TaskContext = createContext()
 export const useTasks = () => useContext(TaskContext)
 
 export default function TaskContextProvider({ children }) {
-  const [tasks, setTasks] = useState([...JSON.parse(localStorage.getItem('todo-list'))] || []);
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('todo-list')) || []);
 
   useEffect(() => {
     localStorage.setItem('todo-list', JSON.stringify(tasks));
