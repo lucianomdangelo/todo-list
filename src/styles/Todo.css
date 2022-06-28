@@ -1,7 +1,19 @@
 :root {
     --dark: #282c34;
-    --medium: grey;
-    --light: lightgray;
+    --medium: darkgray;
+    --light: grey;
+}
+
+.task-list::-webkit-scrollbar {
+    width: 12px;
+}
+.task-list::-webkit-scrollbar-track {
+    background: var(--dark);
+
+}
+.task-list::-webkit-scrollbar-thumb  {
+    background-color: var(--medium);
+    opacity: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -27,8 +39,6 @@
     .task-list-container {
         max-width: 80%;
         margin: auto;
-        display: flex;
-        flex-direction: column;
     }
 }
 

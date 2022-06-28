@@ -5,20 +5,22 @@
         left: 3vw;
         margin-top: 1.5vh;
         max-height: 80vh;
-        overflow:scroll;
+        overflow-y:scroll;
+        overflow-x: hidden;        
     }
 }
 
 @media screen and (min-width: 767px) {
     .task-list {
-        display: inline;
+        display: inline-block;
         width: 100%;
         align-self: center;
         position: relative;
         left: 3vw;
         margin-top: 1.5em;
-        max-height: 80vh;
-        overflow:scroll;
+        max-height: 75vh;
+        overflow-y:scroll;
+        overflow-x: hidden;
     }
 }
 
